@@ -12,6 +12,7 @@ export class AppComponent {
   porcentaje = 0.234;
   moneda = 1234.5;
   nombre = 'carLos eduardO caBrera hErnánDez';
+  video = '7g1sFUxAlcI';
 
   heroe = {
     nombre: 'Logan',

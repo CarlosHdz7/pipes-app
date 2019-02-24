@@ -102,14 +102,14 @@
 
       <tr>
         <th scope="row">{{ moneda }} </th>
-        <td>currency:'EUR':false </td>
-        <td>{{ moneda | currency:'EUR':false }}</td>
+        <td>currency:'EUR':'code' </td>
+        <td>{{ moneda | currency:'EUR':'code' }}</td>
       </tr>
 
       <tr>
         <th scope="row">{{ moneda }} </th>
-        <td>currency:'EUR':true:'4.0-0' </td>
-        <td>{{ moneda | currency:'EUR':true:'4.0-0' }}</td>
+        <td>currency:'EUR':'symbol':'4.0-0' </td>
+        <td>{{ moneda | currency:'EUR':'symbol':'4.0-0' }}</td>
       </tr>
 
       <tr class="bg-primary text-white">
@@ -128,30 +128,24 @@
         <td>{{ heroe | json }}</td>
       </tr>
 
-      <tr>
-        <pre>
-            {{ heroe | json }}
-        </pre>
-      </tr>
-
       <tr class="bg-primary text-white">
         <th colspan="3">Promesas</th>
       </tr>
 
       <tr>
-        <th scope="row">{{ valorDePromesa }}</th>
+        <th scope="row">valorDePromesa</th>
         <td> async </td>
-        <td>{{ valorDePromesa }}</td>
+        <td>valorDePromesa </td>
       </tr>
 
       <tr>
-        <th scope="row">{{ valorDePromesa }}</th>
+        <th scope="row">valorDePromesa</th>
         <td> async </td>
         <td>{{ valorDePromesa | json }}</td>
       </tr>
 
       <tr>
-        <th scope="row">{{ valorDePromesa }}</th>
+        <th scope="row">valorDePromesa</th>
         <td> async </td>
         <td>{{ valorDePromesa | async }}</td>
       </tr>
@@ -193,6 +187,13 @@
         <th scope="row">{{ nombre }}</th>
         <td> capitalizado:false </td>
         <td>{{ nombre | capitalizado:false }}</td>
+      </tr>
+
+      <tr>
+        <td>
+          <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </td>
       </tr>
 
     </tbody>

@@ -8,9 +8,10 @@ import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeEs);
 
 import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
-  declarations: [AppComponent, CapitalizadoPipe],
+  declarations: [AppComponent, CapitalizadoPipe, DomseguroPipe],
   imports: [BrowserModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es' }], // aqui va el idioma 'es'
   bootstrap: [AppComponent]
