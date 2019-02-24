@@ -27,20 +27,20 @@
         <td>Slice:3</td>
         <td>{{ texto | slice:3 }}</td>
       </tr>
-    <tr>
+      <tr>
         <th scope="row">{{ texto }}</th>
         <td>Slice:0:3</td>
         <td>{{ texto | slice:0:3 }}</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <th scope="row">{{ arreglo }}</th>
         <td>Slice:1:5</td>
         <td>{{ arreglo | slice:1:5 }}</td>
-    </tr>
+      </tr>
     </tbody>
   </table>
 
-  <h4>Decimales</h4>
+  <h4>Número</h4>
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -62,26 +62,85 @@
         <td>{{ PI | number:'3.0-0' }}</td>
       </tr>
 
-    <tr>
+      <tr>
         <th scope="row">{{ PI }}</th>
         <td>number:'3.0-0'</td>
-        <td>{{ PI | number:'3.0-0' }}</td>      
-    </tr>
+        <td>{{ PI | number:'3.0-0' }}</td>
+      </tr>
 
-    <tr>
+      <tr>
         <th scope="row">{{ PI }}</th>
         <td>number:'1.0-2'</td>
         <td>{{ PI | number:'1.0-2' }}</td>
-    </tr>
+      </tr>
 
+      <tr>
+        <th scope="row">{{ porcentaje }}</th>
+        <td>percent</td>
+        <td>{{ porcentaje | percent }}</td>
+      </tr>
 
+      <tr>
+        <th scope="row">{{ porcentaje }}</th>
+        <td>percent:'2.2-2'</td>
+        <td>{{ porcentaje | percent:'2.2-2' }}</td>
+      </tr>
+      <tr class="bg-primary text-white">
+        <th colspan="3">En base a la ISO4217</th>
+      </tr>
+      <tr>
+        <th scope="row">{{ moneda }} </th>
+        <td>currency </td>
+        <td>{{ moneda | currency }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ moneda }} </th>
+        <td>currency:'EUR' </td>
+        <td>{{ moneda | currency:'EUR' }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ moneda }} </th>
+        <td>currency:'EUR':false </td>
+        <td>{{ moneda | currency:'EUR':false }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ moneda }} </th>
+        <td>currency:'EUR':true:'4.0-0' </td>
+        <td>{{ moneda | currency:'EUR':true:'4.0-0' }}</td>
+      </tr>
+
+      <tr class="bg-primary text-white">
+        <th colspan="3">Json</th>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ heroe }}</th>
+        <td> nada </td>
+        <td>{{ heroe }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ heroe }}</th>
+        <td> json </td>
+        <td>{{ heroe | json }}</td>
+      </tr>
+
+      <tr>
+        <pre>
+            {{ heroe | json }}
+        </pre>
+      </tr>
 
     </tbody>
   </table>
 
   <hr class="mt-4">
-  <h4>Slice (*ngFor="let item of arreglo | slice:3:7")</h4>
+  <div class="p-3 mb-2 bg-primary text-white">Slice (*ngFor="let item of arreglo | slice:3:7")</div>
   <ul>
-      <li *ngFor="let item of arreglo | slice:3:7">{{ item }}</li>
+    <li *ngFor="let item of arreglo | slice:3:7">{{ item }}</li>
   </ul>
+
 </div>
