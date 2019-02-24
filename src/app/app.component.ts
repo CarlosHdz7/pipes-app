@@ -13,6 +13,8 @@ export class AppComponent {
   moneda = 1234.5;
   nombre = 'carLos eduardO caBrera hErnánDez';
   video = '7g1sFUxAlcI';
+  password = 'carlos';
+  activar = true;
 
   heroe = {
     nombre: 'Logan',

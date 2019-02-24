@@ -37,6 +37,19 @@
         <td>Slice:1:5</td>
         <td>{{ arreglo | slice:1:5 }}</td>
       </tr>
+
+      <tr>
+        <th scope="row">{{ password }}</th>
+        <td>contrasena: {{ activar }}
+          <br>
+          <button (click)="activar = !activar" type="button" class="btn btn-primary">
+            Activar/Desactivar
+          </button>
+        </td>
+        <td>{{ password | password:activar }}</td>
+      </tr>
+
+
     </tbody>
   </table>
 
