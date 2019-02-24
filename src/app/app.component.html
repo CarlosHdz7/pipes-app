@@ -134,11 +134,71 @@
         </pre>
       </tr>
 
+      <tr class="bg-primary text-white">
+        <th colspan="3">Promesas</th>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ valorDePromesa }}</th>
+        <td> async </td>
+        <td>{{ valorDePromesa }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ valorDePromesa }}</th>
+        <td> async </td>
+        <td>{{ valorDePromesa | json }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ valorDePromesa }}</th>
+        <td> async </td>
+        <td>{{ valorDePromesa | async }}</td>
+      </tr>
+
+      <tr class="bg-success text-white">
+        <th colspan="3">Fechas (Español por el idioma configurado en el app.module.ts)</th>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ fecha }}</th>
+        <td> date </td>
+        <td>{{ fecha | date }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ fecha }}</th>
+        <td> date:'medium' </td>
+        <td>{{ fecha | date:'medium' }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ fecha }}</th>
+        <td> date:'MMMM - dd' </td>
+        <td>{{ fecha | date:'MMMM - dd' }}</td>
+      </tr>
+
+      <tr class="bg-warning text-white">
+        <th colspan="3">PIPES PERSONALIZADOS</th>
+      </tr>
+
+      <tr>
+        <th scope="row">{{ nombre }}</th>
+        <td> capitalizado </td>
+        <td>{{ nombre | capitalizado }}</td>
+      </tr>
+
+
+      <tr>
+        <th scope="row">{{ nombre }}</th>
+        <td> capitalizado:false </td>
+        <td>{{ nombre | capitalizado:false }}</td>
+      </tr>
+
     </tbody>
   </table>
 
-  <hr class="mt-4">
-  <div class="p-3 mb-2 bg-primary text-white">Slice (*ngFor="let item of arreglo | slice:3:7")</div>
+  <div class="p-3 mb-2 bg-success text-white">Slice (*ngFor="let item of arreglo | slice:3:7")</div>
   <ul>
     <li *ngFor="let item of arreglo | slice:3:7">{{ item }}</li>
   </ul>

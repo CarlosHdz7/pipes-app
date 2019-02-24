@@ -11,6 +11,7 @@ export class AppComponent {
   PI = Math.PI;
   porcentaje = 0.234;
   moneda = 1234.5;
+  nombre = 'carLos eduardO caBrera hErnánDez';
 
   heroe = {
     nombre: 'Logan',
@@ -21,4 +22,10 @@ export class AppComponent {
       casa: '19'
     }
   };
+
+  fecha = new Date();
+
+  valorDePromesa = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Llego la data'), 3500);
+  });
 }
